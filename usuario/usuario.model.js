@@ -5,7 +5,7 @@ const usuarioSchema = mongoose.Schema({
 	lastName: { type: String, required: false },
 	email: { type: String, required: [true, 'Email required'] },
 	password: { type: String, required: [true, 'Password required'] },
-    phoneNo: { type: String, required: [true, 'Phone number required'] },
+	phoneNo: { type: String, required: [true, 'Phone number required'] },
 	address: { type: String, required: [true, 'Address required'] },
 	isAdmin: { type: Boolean, required: [true, 'Type of user required'] },
 	isDeleted: { type: Boolean, default: false },

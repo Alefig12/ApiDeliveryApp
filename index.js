@@ -27,15 +27,21 @@ mongoose
 app.use(cors());
 app.use(express.json());
 
-import empanadaRoutes from './empanada/empanada.routes.js';
-app.use('/empanada', empanadaRoutes);
-
 import usuarioRoutes from './usuario/usuario.routes.js';
 app.use('/user', usuarioRoutes);
 
+import restauranteRoutes from './restaurante/restaurante.routes.js';
+app.use('/restaurant', restauranteRoutes);
+
+import productoRoutes from './producto/producto.routes.js';
+app.use('/product', productoRoutes);
+
+import pedidoRoutes from './pedido/pedido.routes.js';
+app.use('/order', pedidoRoutes);
+
 // Endpoint para 404
 app.use((req, res) => {
-	res.status(404).json({ message: 'Not founsdabebiia.' });
+	res.status(404).json({ message: 'Not found.' });
 });
 
 // Inicia app en puerto 8080
